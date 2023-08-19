@@ -187,20 +187,37 @@ body {
     background-size: cover;
 }
 
-.grid-item {
+/* Grid */
+
+/* ---- grid ---- */
+
+.grid {
+    background: #DDD;
+  }
+  
+  /* clear fix */
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  /* ---- .grid-item ---- */
+  
+  .grid-sizer,
+  .grid-item {
+    width: 30.333%;
+  }
+  
+  .grid-item {
     float: left;
-    width: 80px;
-    height: 60px;
-    border: 2px solid hsla(0, 0%, 0%, 0.5);
-}
-
-.grid-item--width2 {
-    width: 160px;
-}
-
-.grid-item--height2 {
-    height: 140px;
-}
+  }
+  
+  .grid-item img {
+    display: block;
+    max-width: 100%;
+  }
+  
 
 /* Instagram */
 
@@ -331,6 +348,14 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
+
+.realize {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 @media (max-width: 900px) {
 
@@ -475,14 +500,14 @@ body {
 
 input[type="text"] {
   height: 60px;
-  font-size: 55px;
+  font-size: 30px;
   display: inline-block;
   font-family: "Lato";
   font-weight: 100;
   border: none;
   outline: none;
-  color: #555;
-  padding: 3px;
+  color: #ffffff;
+  padding: 3px 10px;
   padding-right: 60px;
   width: 0px;
   position: absolute;
@@ -491,6 +516,7 @@ input[type="text"] {
   background: none;
   z-index: 3;
   transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  border-radius: 8px;
   cursor: pointer;
 }
 
@@ -503,6 +529,7 @@ input[type="text"]:focus {
   z-index: 1;
   border-bottom: 1px solid #BBB;
   cursor: text;
+  background-color: #adadad
 }
 input[type="submit"] {
   height: 67px;
