@@ -21,3 +21,7 @@ var msnry = new Masonry( '.grid', {
         400: 1
     }
 });
+
+new VenoBox({
+    selector: ".venobox"
+});

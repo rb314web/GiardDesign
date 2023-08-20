@@ -188,38 +188,13 @@ body {
 }
 
 
-/* Grid */
+.realize {
+    background-color: #DCC1AB;
+}
 
-/* ---- grid ---- */
-
-.grid {
-    background: #DCC1AB;
-  }
-  
-  /* clear fix */
-  .grid:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-  
-  /* ---- .grid-item ---- */
-  
-  .grid-sizer,
-  .grid-item {
-    width: 32.5%;
-  }
-  
-  .grid-item {
-    padding: 20px;
-    float: left;
-  }
-  
-  .grid-item img {
-    display: block;
-    max-width: 100%;
-  }
-  
+.realize h2 {
+    padding: 50px;
+}
 
   .macy-container img {
     width: 100%;
@@ -353,13 +328,6 @@ hr {
     border-top: 2px solid #fff;
     margin: 1em 0;
     padding: 0;
-}
-
-.realize {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 
