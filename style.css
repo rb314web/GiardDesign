@@ -31,7 +31,7 @@ body {
     /* 24px */
 }
 
-.hero-block div button {
+.hero-block_button {
     display: flex;
     padding: 12px 24px 14px 24px;
     align-items: center;
@@ -42,7 +42,7 @@ body {
     border: none
 }
 
-.hero-block div div button:nth-child(2) {
+.hero-block_button:nth-child(2) {
     background-color: transparent;
     border: 1px solid #1B5B31;
     color: #1B5B31;

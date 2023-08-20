@@ -25,3 +25,7 @@ var msnry = new Masonry( '.grid', {
 new VenoBox({
     selector: ".venobox"
 });
+
+document.getElementByClassName("carousel").carousel({
+    interval: 2000
+  })
