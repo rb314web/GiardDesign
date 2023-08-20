@@ -187,12 +187,13 @@ body {
     background-size: cover;
 }
 
+
 /* Grid */
 
 /* ---- grid ---- */
 
 .grid {
-    background: #DDD;
+    background: #DCC1AB;
   }
   
   /* clear fix */
@@ -206,10 +207,11 @@ body {
   
   .grid-sizer,
   .grid-item {
-    width: 30.333%;
+    width: 32.5%;
   }
   
   .grid-item {
+    padding: 20px;
     float: left;
   }
   
@@ -218,6 +220,10 @@ body {
     max-width: 100%;
   }
   
+
+  .macy-container img {
+    width: 100%;
+  }
 
 /* Instagram */
 
