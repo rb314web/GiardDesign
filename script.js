@@ -1,6 +1,10 @@
 const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
 const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))
 
+document.querySelector('.icon').addEventListener("click", () => {
+    document.querySelector('.icon').classList.toggle('active')
+    document.querySelector("input[type='text']").classList.toggle("active");
+})
 
 var msnry = new Masonry( '.grid', {
     columnWidth: 10,

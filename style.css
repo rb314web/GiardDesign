@@ -1,5 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
+
 body {
-    background-color: #333;
+    background-color: #DCC1AB;
+}
+
+nav .searchbar {
+    position: relative;
+}
+
+.searchbar input[type="text"] {
+    border: 0;
+    padding: 0;
+    width: 0px;
+    height: 35px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.searchbar .icon {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 100%;
+    background: none;
+    border-radius: 3px;
+    color: #fff;
+    transition: all 0.5s 0.3s ease;
+    cursor: pointer;
+}
+
+.searchbar {
+    padding-left: 35px;
+}
+
+.searchbar .icon img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.searchbar .icon.active {
+    background: #062333;
+    transition: all .5s ease;
+}
+
+.searchbar .icon.active img {
+    filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(210deg) brightness(102%) contrast(100%);
+}
+
+.searchbar input[type="text"] {
+    height: 100%;
+}
+
+.searchbar input[type="text"].active {
+    width: 250px;
+    height: 100%;
+    padding: 0 10px;
+    transition: all .5s ease;
 }
 
 .nav-link {
@@ -7,9 +69,31 @@ body {
 }
 
 .hero-block {
-    max-height: 50vh;
+    display: flex;
     background-color: #DCC1AB;
     overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.carousel {
+    width: 100%;
+}
+
+.hero-block_photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.hero-block_contant {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding: 40px;
 }
 
 .hero-block h1 {
@@ -196,9 +280,9 @@ body {
     padding: 50px;
 }
 
-  .macy-container img {
+.macy-container img {
     width: 100%;
-  }
+}
 
 /* Instagram */
 
@@ -331,12 +415,10 @@ hr {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
 
-    /* Hero */
-
-    .hero-block {
-        max-height: 80vh;
+    .offer_header h1 {
+        font-size: 38px;
     }
 
     .offer_item {
@@ -410,7 +492,7 @@ hr {
     .footer_content_line2 div a:nth-child(2) {
         margin: 0;
     }
-    
+
     .footer_content_line2 div a {
         padding: 0 15px;
 
@@ -449,7 +531,7 @@ hr {
 }
 
 @media (max-width: 768px) {
-    
+
     .footer_content_line3 {
         flex-direction: column;
         align-items: center;
@@ -457,73 +539,26 @@ hr {
     }
 }
 
-@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
-@import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
+@media (max-width: 992px) {
 
-body {
-	background: #DDD;
-	font-size: 15px;
-}
-#wrap {
-  display: inline-block;
-  position: relative;
-  height: 60px;
-  padding: 0;
-  position: relative;
-}
+    /* Navigation */
 
-input[type="text"] {
-  height: 60px;
-  font-size: 30px;
-  display: inline-block;
-  font-family: "Lato";
-  font-weight: 100;
-  border: none;
-  outline: none;
-  color: #ffffff;
-  padding: 3px 10px;
-  padding-right: 60px;
-  width: 0px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: none;
-  z-index: 3;
-  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
-  border-radius: 8px;
-  cursor: pointer;
+    .searchbar {
+        height: 40px;
+    }
+
+    .searchbar .icon {
+        left: 0;
+        right: auto;
+    }
+
+    /* Hero */
+
+    .hero-block {
+        flex-direction: column;
+    }
 }
 
-input[type="text"]:focus:hover {
-  border-bottom: 1px solid #BBB;
-}
-
-input[type="text"]:focus {
-  width: 700px;
-  z-index: 1;
-  border-bottom: 1px solid #BBB;
-  cursor: text;
-  background-color: #adadad
-}
-input[type="submit"] {
-  height: 67px;
-  width: 63px;
-  display: inline-block;
-  color:red;
-  float: right;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRFU1NT9fX1lJSUXl5e1dXVfn5+c3Nz6urqv7+/tLS0iYmJqampn5+fysrK39/faWlp////Vi4ZywAAABF0Uk5T/////////////////////wAlrZliAAABLklEQVR42rSWWRbDIAhFHeOUtN3/ags1zaA4cHrKZ8JFRHwoXkwTvwGP1Qo0bYObAPwiLmbNAHBWFBZlD9j0JxflDViIObNHG/Do8PRHTJk0TezAhv7qloK0JJEBh+F8+U/hopIELOWfiZUCDOZD1RADOQKA75oq4cvVkcT+OdHnqqpQCITWAjnWVgGQUWz12lJuGwGoaWgBKzRVBcCypgUkOAoWgBX/L0CmxN40u6xwcIJ1cOzWYDffp3axsQOyvdkXiH9FKRFwPRHYZUaXMgPLeiW7QhbDRciyLXJaKheCuLbiVoqx1DVRyH26yb0hsuoOFEPsoz+BVE0MRlZNjGZcRQyHYkmMp2hBTIzdkzCTc/pLqOnBrk7/yZdAOq/q5NPBH1f7x7fGP4C3AAMAQrhzX9zhcGsAAAAASUVORK5CYII=) center center no-repeat;
-  text-indent: -10000px;
-  border: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  cursor: pointer;
-  opacity: 0.4;
-  cursor: pointer;
-  transition: opacity .4s ease;
-}
-
-input[type="submit"]:hover {
-  opacity: 0.8;
-}
+.carousel-inner img {
+    object-fit: cover;
+  }
