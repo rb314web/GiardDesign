@@ -19,10 +19,9 @@ var msnry = new Masonry( '.grid', {
     margin: 24,
     columns: 6,
     breakAt: {
-        1200: 5,
-        940: 3,
-        520: 2,
-        400: 1
+        4000: 3,
+        1100: 2,
+        500: 1
     }
 });
 

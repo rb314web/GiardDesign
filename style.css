@@ -76,6 +76,11 @@ nav .searchbar {
     margin: 0 auto;
 }
 
+.carousel-inner img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
 .carousel {
     width: 100%;
 }
@@ -101,8 +106,6 @@ nav .searchbar {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
-
-    /* 116.667% */
 }
 
 .hero-block p {
@@ -112,7 +115,6 @@ nav .searchbar {
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    /* 24px */
 }
 
 .hero-block_button {
@@ -266,18 +268,31 @@ nav .searchbar {
 }
 
 .company_photo {
-    background-image: url('./Photo.png');
+    background-image: url('./assets/img/companyphoto.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 
-.realize {
+.realizations {
+    position: relative;
     background-color: #DCC1AB;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.realize h2 {
-    padding: 50px;
+.realizations_shadow {
+    height: 50%;
+    background-color: red;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+}
+
+.realizations h2 {
+    font-size: 48px;
+    padding: 150px 150px;
 }
 
 .macy-container img {
@@ -414,6 +429,35 @@ hr {
     padding: 0;
 }
 
+@media (max-width: 992px) {
+
+    .company_content_wrapper {
+        padding: 80px;
+    }
+
+    /* Navigation */
+
+    .searchbar {
+        height: 40px;
+    }
+
+    .searchbar .icon {
+        left: 0;
+        right: auto;
+    }
+
+    /* Hero */
+
+    .hero-block {
+        flex-direction: column;
+    }
+
+    .realizations h2 {
+        font-size: 28px;
+        padding: 60px 50px;
+    }
+}
+
 
 @media (max-width: 768px) {
 
@@ -528,37 +572,10 @@ hr {
         margin: 0 20px 20px 20px;
     }
 
-}
-
-@media (max-width: 768px) {
-
     .footer_content_line3 {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
+
 }
-
-@media (max-width: 992px) {
-
-    /* Navigation */
-
-    .searchbar {
-        height: 40px;
-    }
-
-    .searchbar .icon {
-        left: 0;
-        right: auto;
-    }
-
-    /* Hero */
-
-    .hero-block {
-        flex-direction: column;
-    }
-}
-
-.carousel-inner img {
-    object-fit: cover;
-  }
